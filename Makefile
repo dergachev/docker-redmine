@@ -1,3 +1,5 @@
+IMAGE = ${USER}/redmine
+
 all: help
 
 help:
@@ -11,7 +13,7 @@ help:
 	@echo "   5. make purge       - stop and remove the container"
 
 build:
-	@docker build --tag=${USER}/redmine .
+	@docker build --tag=$(IMAGE) .
 
 quickstart:
 	@echo "Starting redmine..."
